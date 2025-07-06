@@ -1,28 +1,52 @@
 # 📚 Online Bookstore SQL Project
 
-## 📌 Overview
-This project is a PostgreSQL-based database system designed for managing an online bookstore. It includes tables for books, customers, orders, and more.
+## 📌 Project Overview
+This PostgreSQL-based SQL project models an online bookstore database system. It includes schema and data for books, customers, orders, and more. The SQL dump file was exported using pgAdmin and includes both structure and data.
 
-## 🧰 Tools Used
+## 🛠️ Tools & Technologies
 - PostgreSQL
 - pgAdmin 4
 
-## 📂 Schema Details
-- **Books**: book_id, title, author, genre, published_year, price, stock
-- **Customers**: customer_id, name, email, etc.
-- **Orders**: order_id, customer_id, order_date, etc.
-- **OrderDetails**: order_id, book_id, quantity, price
+## 🗃️ Database Schema
 
-## 🔍 Key Queries You Can Run
-- Top 5 selling books
-- Monthly sales performance
-- Revenue by genre
-- Low stock alerts
+### 📘 Books Table
+- `book_id` (Primary Key)
+- `title`
+- `author`
+- `genre`
+- `published_year`
+- `price`
+- `stock`
 
-## 💡 Learning Outcome
-- Hands-on practice with DDL & DML
-- Used SQL JOINs, subqueries, GROUP BY, and aggregate functions
-- Learned to backup PostgreSQL database via pgAdmin
+### 👥 Customers Table
+- `customer_id` (Primary Key)
+- `name`
+- `email`
+- `location`
+
+### 📦 Orders Table
+- `order_id` (Primary Key)
+- `customer_id` (Foreign Key)
+- `order_date`
+
+### 🧾 OrderDetails Table
+- `order_id` (Foreign Key)
+- `book_id` (Foreign Key)
+- `quantity`
+- `price`
+
+## 📊 Potential Analyses
+- Top 5 best-selling books
+- Monthly revenue trends
+- Customer purchase behavior
+- Genre-wise performance
+- Stock level alerts
+
+## 💡 What I Learned
+- Writing DDL & DML in PostgreSQL
+- Using pgAdmin to export/restore databases
+- Efficient data backup using `COPY FROM`
+- Practiced SQL joins, subqueries, and aggregation
 
 ## 👩‍💻 Author
 **Ayushi Singh**  
