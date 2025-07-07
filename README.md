@@ -53,6 +53,7 @@ This project explores a fictional online bookstore's sales data using SQL. With 
 - **Trend:** Older books tend to sell less despite higher prices  
 - **Revenue by genre:** Revealed which genres consistently drive profit
 
+---
 
 ## 📂 Datasets Included 🔗
 
@@ -60,6 +61,14 @@ This project explores a fictional online bookstore's sales data using SQL. With 
 - [`Orders SQL.csv`](./Orders%20Sql.csv.xlsx): Order data with purchase records  
 - [`Customers SQL.csv`](./Customers%20Sql.csv.xlsx): Customer-level information for deeper insights  
 
+----
+
+📌 **Conclusion**
+
+This project demonstrates my ability to perform detailed data analysis using SQL and communicate insights in a business
+relevant context. It showcases both technical and analytical thinking, making it suitable for real-world applications.
+
+---
 
 ## 📈 Sample Query
 
@@ -68,12 +77,7 @@ SELECT genre, SUM(price * copies_sold) AS total_revenue
 FROM books
 GROUP BY genre
 ORDER BY total_revenue DESC;
-
-📌 Conclusion
-This project demonstrates my ability to perform detailed data analysis using SQL and communicate insights in a business-relevant context. It showcases both technical and analytical thinking, making it suitable for real-world applications.
-
-
-
+---
 
 ## 👩‍💻 Author
 **Ayushi Singh**  
