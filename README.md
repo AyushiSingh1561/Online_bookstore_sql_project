@@ -63,6 +63,11 @@ FROM books
 GROUP BY genre
 ORDER BY total_revenue DESC;
 
+📌 Conclusion
+This project demonstrates my ability to perform detailed data analysis using SQL and communicate insights in a business-relevant context. It showcases both technical and analytical thinking, making it suitable for real-world applications.
+
+
+
 
 ## 👩‍💻 Author
 **Ayushi Singh**  
