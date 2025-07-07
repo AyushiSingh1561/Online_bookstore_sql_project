@@ -1,52 +1,68 @@
-# 📚 Online Bookstore SQL Project
+# 📚 Online Bookstore Sales Analysis (SQL Project)
 
-## 📌 Project Overview
-This PostgreSQL-based SQL project models an online bookstore database system. It includes schema and data for books, customers, orders, and more. The SQL dump file was exported using pgAdmin and includes both structure and data.
+This project explores a fictional online bookstore's sales data using SQL. With over 450 book records, the analysis helps uncover business insights such as top-performing genres, best-selling books, and revenue trends across years.
+
+---
+
+## 📌 Objective
+
+- Analyze book sales data to generate actionable insights  
+- Identify top-selling genres and authors  
+- Understand pricing impact and publication trends  
+- Practice advanced SQL skills with real-like data
+
+---
 
 ## 🛠️ Tools & Technologies
-- PostgreSQL
-- pgAdmin 4
 
-## 🗃️ Database Schema
+- **Database:** PostgreSQL  
+- **Language:** SQL  
+- **Platform:** pgAdmin / SQL Editor  
+- **Data Size:** 450+ rows
 
-### 📘 Books Table
-- `book_id` (Primary Key)
-- `title`
-- `author`
-- `genre`
-- `published_year`
-- `price`
-- `stock`
+---
 
-### 👥 Customers Table
-- `customer_id` (Primary Key)
-- `name`
-- `email`
-- `location`
+## 📂 Dataset Fields
 
-### 📦 Orders Table
-- `order_id` (Primary Key)
-- `customer_id` (Foreign Key)
-- `order_date`
+| Field           | Description                          |
+|----------------|--------------------------------------|
+| `book_id`       | Unique book identifier               |
+| `title`         | Book title                           |
+| `author`        | Author's full name                   |
+| `genre`         | Book genre (Fiction, Mystery, etc.)  |
+| `year_published`| Year of publication                  |
+| `price`         | Price of the book                    |
+| `copies_sold`   | Number of copies sold                |
 
-### 🧾 OrderDetails Table
-- `order_id` (Foreign Key)
-- `book_id` (Foreign Key)
-- `quantity`
-- `price`
+---
 
-## 📊 Potential Analyses
-- Top 5 best-selling books
-- Monthly revenue trends
-- Customer purchase behavior
-- Genre-wise performance
-- Stock level alerts
+## 🧠 Key SQL Concepts Used
 
-## 💡 What I Learned
-- Writing DDL & DML in PostgreSQL
-- Using pgAdmin to export/restore databases
-- Efficient data backup using `COPY FROM`
-- Practiced SQL joins, subqueries, and aggregation
+- `GROUP BY` and `ORDER BY`  
+- `JOINs` and subqueries  
+- Aggregate functions: `SUM()`, `AVG()`, `COUNT()`  
+- Window functions: `RANK()`, `ROW_NUMBER()`  
+- Conditional filtering using `WHERE`, `HAVING`
+
+---
+
+## 📊 Sample Insights
+
+- **Most profitable genre:** Mystery  
+- **Top-selling book:** Based on `copies_sold * price`  
+- **Trend:** Older books tend to sell less despite higher prices  
+- **Revenue by genre:** Revealed which genres consistently drive profit
+
+---
+
+## 📈 Sample Query
+
+```sql
+SELECT genre, SUM(price * copies_sold) AS total_revenue
+FROM books
+GROUP BY genre
+ORDER BY total_revenue DESC;
+
 
 ## 👩‍💻 Author
 **Ayushi Singh**  
